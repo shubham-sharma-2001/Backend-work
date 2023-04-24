@@ -108,48 +108,7 @@ sendotp = async (req, res) => {
   }
 };
 
-// ......................Not working below one but good for reference//
 
-// sendotp = (req,res)=>{
-//   console.log(req.body)
-
-//   const otp = Math.floor(100000 + Math.random() * 900000);
-
-//   console.log(otp)
-
-//   let user =  User.findOne({ email: req.body.email });
-//   if (!user) {
-//     res.send({ code: 500, message: 'User not found' });
-//   }
-//   // else
-//   // {
-//     const transporter = nodemailer.createTransport({
-//       service: 'gmail',
-//       auth: {
-//         user: '20cse005ayushkumar@gmail.com',
-//         pass: 'iurnwlcknmphqauo'
-//       }
-//     });
-
-//     const mailOptions = {
-//       from: '20cse005ayushkumar@gmail.com',
-//       to: req.body.email,
-//       subject: 'OTP Verification',
-//       text: `Your OTP is ${otp}`
-//     };
-
-//     transporter.sendMail(mailOptions, function(error, info) {
-//       if (error) {
-//         res.send({ message: 'Server Error', code: 500 });
-//         console.log(error);
-//       } else {
-//         console.log('Email sent: ' + info.response);
-//         res.send({ message: 'OTP send', code: 200 });
-//       }
-//     });
-
-//   // }
-// }
 
 //submitotp
 submitotp = (req, res) => {
